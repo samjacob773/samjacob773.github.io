@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Psychic Computer Guessing Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="outline">
+    <div class ="col-sm-3"></div>
+   </div>
+
+
+   <div class="col-sm-6"></div>
+   <header>
+     <h3>Try Our Psychic Computer Guessing Game!</h3>
+   </header>
+
+   <div class="setup"></div>
+   <h4>Here's How to Play. The computer is going to choose a letter from the English Alphabet, from A-Z.<br>Let's see how good you are at guessing what letter the computer selects.</h4>
+   <br>
+  <h2>Are YOU really Psychic?</h2>
+  </div>
+  <!---Results-->
+  <div id="tallies">
+    <ul class="list group">
+      <li class="list-group-item"><p id="wins"> Wins: </p></li>
+      <li class="list-group-item"><p id="losses">Losses:</p></li>
+      <li class="list-group-item"><p id="guessestogo">You Have this many Guesses Left:</p></li>
+      <li class="list-group-item"><p id="guessesmade">You've Tried This Many Guesses:</p></li> 
+    </ul>
+  </div>
+  <div class="col-sm-3">
+  </div>
+</div>
+</div>
+    <div class="col-sm-12">
+    </div>
+  <script type="text/javascript">
+  //Create an Array with all 26 letters of the English Alphabet
+var alphabetList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+//Start at Zero
+var wins = 0;
+var losses = 0;
+var guesses = 10;
+var guessesLeft = 10;
+var guessedLetters = []
+var lettersLeft = null;
+
+// Computer randomly selects a letter from alphabetList array
+      var computerGuess = alphabetList[Math.floor(Math.random() * alphabetList.length)];
+      //alert("computerGuess: "+computerGuess);//
+
+//User gets 10 guesses
+var updateGuessesLeft = function(){
+// display GuessesLeft     
+document.querySelector('#guessestogo').innerHTML = "Guesses left: " + guessesLeft;
+};
+
+var updateLettersLeft = function(){
+    this.lettersLeft = this.alphabetList[Math.floor(Math.random() * this.alphabetList.length)];
+};
+
+//spit out letters guessed so far, delineated by commas
+var updateGuessesMade = function() {
+    document.querySelector('#guessesmade').innerHTML = "You've already guessed: " + guessedLetters.join(',');
+};
+
+//Reset function
+var reset = function() {
+    totalGuesses = 10;
+    guessesLeft = 10;
+    guessedLetters = [];
+    computerGuess = alphabetList[Math.floor(Math.random() * alphabetList.length)];
+    //alert("computerGuess: "+computerGuess);//
+
+updateLettersLeft();
+updateGuessesLeft();
+updateGuessesMade();
+}
+
+updateLettersLeft();
+updateGuessesLeft();
+
+// user selects letter choice
+document.onkeyup = function(event) {
+    guessesLeft--;
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+
+    if (userGuess == computerGuess) {
+        wins++;
+        document.querySelector('#wins').innerHTML = "Wins: " + wins;
+        alert("OMG! You must TOTALLY be psychic!");
+        reset();
+    }
+    else {
+      if (guessesLeft > 0) {
+        guessedLetters.push(userGuess)
+        updateGuessesLeft();
+        updateGuessesMade();
+      }
+      else {
+        //Display losses
+        losses++;
+        document.querySelector('#losses').innerHTML = "Losses:" + losses;
+        alert("Maybe you aren't so much of a psychic. That's ok. Maybe you'll get better with practice? Please try again.");
+        reset();
+      }
+    }
+};
+  </script>
+</body>
+</html>
