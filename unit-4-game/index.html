@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>CrystalClicker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <div class= "containerB">
+      <div id= "crystalC">
+        <h1 id= "crystalHeader">Crystal Collector</h1>
+      </div>
+      <div class="container">
+        <ul>
+          <li class ="rules">
+            At the start of the game, you are given a random number. 
+        </li>
+        <li class="rules">
+          Click on one of the four different crystals below. By Clicking on a crystal, you add a specific
+          amount to your total score.
+        </li>
+        <li class="rules">
+          You win if you can get your total score and random number to match EXACTLY. You lose if you go over the random number in amount.   
+        </li> 
+        <li class="rules">
+        The value of each crystal will be hidden from you. But when you click it, you will see your score change, and can infer from it the value of each crystal.    
+        </li>
+        <li class="rules">
+          Each time a new round starts, the game will start with a new random number as well as four new values for each crystal. We will then keep track of your wins and losses.
+        </li>
+        </ul>
+      </div>
+      
+      
+      <section>
+        <div id="compNum">
+          <p>Your Random Number is:</p>
+          <h2 id="cNumber">0</h2>
+        </div>
+        <div id="Ws_Ls">
+          <p id="wins">Wins: 0</p>
+          <p id="losses">Losses: 0</p>
+        </div>
+      </section>
+
+        <section>
+        <div class="wrapper">
+          <button class="btn1 crystal-btn" value="1"></button>
+          <button class="btn2 crystal-btn" value="10"></button>
+          <button class="btn3 crystal-btn" value="20"></button>
+          <button class="btn4 crystal-btn" value="30"></button>
+        </div>
+        </section>
+       
+        <div id="score">
+            <p>Your Total Score is:</p>
+          <h2 id="scoreTotal">0</h2>
+        </div>
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src= "assets/javascript/game.js"></script>
+</body>
+</html>

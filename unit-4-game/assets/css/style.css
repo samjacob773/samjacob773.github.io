@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 1000px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.containerB {
+    width: 50%;
+}
+
+.container {
+    float: left;
+    margin-left: 8px;
+    clear: both;
+}
+
+#crystalC {
+    float: left;
+    margin-top: 8px;
+    margin-left: 8px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+
+#crystalHeader {
+    color: #1a1a1a;
+    font-size: 30px;
+    padding: 3px;
+}
+
+ul {
+    margin-top: 10px;
+    color: black;
+    background-color: #f2f2f2;
+    padding: 10px 8px 50px 8px;
+}
+
+.rules {
+    list-style-type: none;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    padding-bottom: 8px;
+}
+
+section {
+    float: left;
+    margin-left: 8px;
+    clear: both;
+    overflow: hidden;
+    width: 75%;
+    /* display: none; */
+}
+
+#compNum {
+    background-color: #f2f2f2;
+    color: #800000;
+    width: 246px;
+    height: 100px;
+    text-align: center;
+    float: left;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#Ws_Ls {
+    background-color:#f2f2f2;
+    color: #1a1a1a;
+    float: left;
+    height: 100px;
+    margin-left: 10px;
+}
+
+#wins,
+#losses {
+    color: #f2f2f2;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 0 20px 3px 3px;
+}
+
+.wrapper {
+    float: left;
+    margin-left: 8px;
+    clear: both;
+}
+
+.btn1 {
+    background: transparent;
+    background-image: url("../images/jewel1.png");
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+.btn2 {
+    background: transparent;
+    background-image: url("../images/jewel2.png");
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+.btn3 {
+    background: transparent;
+    background-image: url("../images/jewel3.png");
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+.btn4 {
+    background: transparent;
+    background-image: url("../images/jewel4.png");
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+button {
+    border: 0;
+}
+
+#yourTotal {
+    float: left;
+    clear: both;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    padding: 4px 0 4px 4px;
+    width: 246px;
+    background-color: #f2f2f2;
+    color: #lalala;
+}
+
+#score {
+    float: left;
+    clear: both;
+    width: 246px;
+    height: 100px;
+    background-color: #f2f2f2; 
+    text-align: center;
+    color: #1a1a1a;
+}
+
