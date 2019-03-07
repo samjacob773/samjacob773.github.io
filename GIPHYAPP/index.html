@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Cartoon GIFS of Giphy</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Mrs+Sheppards|Short+Stack" rel="stylesheet">
+
+
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+  
+
+   <div class="jumbotron">
+       <div class="container">
+           <!-- had to hard code space with escape keys due to unattractive ligature in ShortStack font -->
+           <h1>Animated GI&nbsp;FS featuring cartoons of Giphy</h1>
+   </div>
+   </div>      
+<!-- Button -->
+<div id="gifButtonsView" class="container">
+</div>
+
+<!-- main Container -->
+<div class="container">
+<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+<!-- gifs -->
+<div id="gifsView">
+</div>  
+</div>
+
+
+<!-- submit Form-->
+<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+<form id="gifForm" role="form">
+</div>
+</div>
+
+
+    <div class="form-group">
+        <label for="topicInput"><h3>Add your fave Cartoon</h3> </label>
+        <input type="text" id="topicInput">
+    <input id="addGif" type="submit" value="Add Your Cartoon" class="btn btn-primary">
+    <input id="removeGif" type="submit" value="Remove last Cartoon" class="btn btn-primary">  
+</div>
+</form>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>  
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+
+</body>
+</html>
